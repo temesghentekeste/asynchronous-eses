@@ -34,3 +34,18 @@ ES5http.prototype.post = function (url, data, callback) {
 
   this.request.send(JSON.stringify(data));
 };
+
+// HTTP PUT request
+// eslint-disable-next-line func-names
+ES5http.prototype.put = function (url, data, callback) {
+  this.request.open('PUT', url);
+  this.request.setRequestHeader('content-type', 'application/json');
+
+  // To avoid this keyword error in regular function
+  const self = this;
+  this.request.addEventListener('readystatechange', () => {
+    callback(null, self.request.responseText);
+  });
+
+  this.request.send(JSON.stringify(data));
+};
