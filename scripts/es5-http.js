@@ -23,8 +23,8 @@ ES5http.prototype.get = function (url, callback) {
 // HTTP POST request
 // eslint-disable-next-line func-names
 ES5http.prototype.post = function (url, data, callback) {
-  this.request.open('POST', url);
-  this.request.setRequestHeader('content-type', 'application/json');
+  this.request.open('POST', url, true);
+  this.request.setRequestHeader('Content-type', 'application/json');
 
   // To avoid this keyword error in regular function
   const self = this;
@@ -61,7 +61,7 @@ ES5http.prototype.delete = function (url, callback) {
   this.request.addEventListener('readystatechange', (e) => {
     if (e.target.readyState === 4 && e.target.status === 200) {
       callback(null, 'Post deleted successfully');
-    }else if(e.target.readyState == 4) {
+    } else if (e.target.readyState === 4) {
       callback('An error has occurred', undefined);
     }
   });

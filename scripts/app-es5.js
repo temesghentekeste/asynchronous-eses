@@ -43,7 +43,6 @@ const http = new ES5http(); /* eslint-disable-line no-undef */
 //   });
 
 
-
 // Delete data
 http.delete('https://jsonplaceholder.typicode.com/posts/1',
   (error, response) => {
