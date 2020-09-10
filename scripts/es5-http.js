@@ -6,7 +6,7 @@ function ES5http() {
 // HTTP GET request
 // eslint-disable-next-line func-names
 ES5http.prototype.get = function (url, callback) {
-  this.request.open('GET', url);
+  this.request.open('GET', url, true);
 
   this.request.addEventListener('readystatechange', (e) => {
     if (e.target.readyState === 4 && e.target.status === 200) {
@@ -19,3 +19,5 @@ ES5http.prototype.get = function (url, callback) {
 
   this.request.send();
 };
+
+
