@@ -49,3 +49,22 @@ ES5http.prototype.put = function (url, data, callback) {
 
   this.request.send(JSON.stringify(data));
 };
+
+// HTTP DELETE request
+// eslint-disable-next-line func-names
+ES5http.prototype.delete = function (url, callback) {
+  this.request.open('DELETE', url);
+
+  // To avoid this keyword error in regular function
+  // const self = this;
+  // Or I can pass the event args as follows
+  this.request.addEventListener('readystatechange', (e) => {
+    if (e.target.readyState === 4 && e.target.status === 200) {
+      callback(null, 'Post deleted successfully');
+    }else if(e.target.readyState == 4) {
+      callback('An error has occurred', undefined);
+    }
+  });
+
+  this.request.send();
+};
