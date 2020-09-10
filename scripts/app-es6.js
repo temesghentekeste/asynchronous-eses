@@ -1,3 +1,4 @@
+
 // Instantiate ES6HTTP
 const request = new ES6HTTP();
 
@@ -35,3 +36,9 @@ request.get('https://jsonplaceholder.typicode.com/users/1')
        } )
        .then( data => console.log('Updated user', data))
        .catch( err => console.log(err));
+
+
+// Delete user
+request.delete('https://jsonplaceholder.typicode.com/users/1')
+.then( res => console.log('Delete:',res) )
+.catch( err => console.log(err));
