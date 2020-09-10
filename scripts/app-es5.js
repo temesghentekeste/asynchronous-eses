@@ -5,15 +5,15 @@ const http = new ES5http(); /* eslint-disable-line no-undef */
 // Get posts
 // http.get('https://jsonplaceholder.typicode.com/posts',
 // function(error, data) {
-//   if (error) console.log(error); /* eslint-disable-line no-console */
-//   else console.log(data); /* eslint-disable-line no-console */
+//   if (error) console.log(error);
+//   else console.log(data);
 // });
 
 // Get post
 // http.get('https://jsonplaceholder.typicode.com/posts/1',
 //   function (error, data) {
-//     if (error) console.log(error); /* eslint-disable-line no-console */
-//     else console.log(data); /* eslint-disable-line no-console */
+//     if (error) console.log(error);
+//     else console.log(data);
 //   });
 
 // Create Data
@@ -25,27 +25,26 @@ const http = new ES5http(); /* eslint-disable-line no-undef */
 // Create Post
 // http.post('https://jsonplaceholder.typicode.com/posts', data,
 //   (error, data) => {
-//     if (error) console.log(error); /* eslint-disable-line no-console */
-//     else console.log(data); /* eslint-disable-line no-console */
+//     if (error) console.log(error);
+//     else console.log(data);
 //   });
 
-// // Updated Data
+// Updated Data
 // const updatedData = {
 //   title: 'Updated Post',
 //   body: 'Body of Updated Post',
 // };
 
-// http.put('https://jsonplaceholder.typicode.com/posts/1',
-//   updatedData,
+// http.put('https://jsonplaceholder.typicode.com/posts/1', updatedData,
 //   (error, data) => {
-//     if (error) console.log(error); /* eslint-disable-line no-console */
-//     else console.log(data); /* eslint-disable-line no-console */
+//     if (error) console.log(error);
+//     else console.log(data);
 //   });
 
 
 // Delete data
 http.delete('https://jsonplaceholder.typicode.com/posts/1',
   (error, response) => {
-    if (error) console.log(error); /* eslint-disable-line no-console */
-    else console.log(response); /* eslint-disable-line no-console */
+    if (error) console.log(error);
+    else console.log(response);
   });
