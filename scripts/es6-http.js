@@ -18,6 +18,7 @@
        }
      });
    }
+   
 
    // HTTP POST Request
    post(url, data) {
@@ -31,4 +32,17 @@
       .then(res => res.json())
       .catch(err => err)
    }
+
+      // HTTP PUT Request
+      put(url, data) {
+        return fetch(url, {
+           method: 'PUT',
+           headers: {
+             'Content-Type': 'application/json'
+           },
+           body: JSON.stringify(data)
+         })
+         .then(res => res.json())
+         .catch(err => err)
+      }
 }
