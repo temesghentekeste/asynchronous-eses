@@ -1,5 +1,5 @@
 /**
- * ES6HTTP Library
+ * ES7HTTP Library
  * Library for making HTTP requests
  *
  * @version 3.0.0
@@ -27,7 +27,7 @@ class ES7HTTP {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(data),
-    })
+    });
     const responseData = await response.json();
     return responseData;
   }
@@ -47,6 +47,7 @@ class ES7HTTP {
 
   // HTTP DELETE Request
   async delete(url) {
+    // eslint-disable-next-line no-unused-vars
     const response = await fetch(url, {
       method: 'DELETE',
       headers: {
