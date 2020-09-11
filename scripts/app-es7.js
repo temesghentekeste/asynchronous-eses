@@ -32,3 +32,14 @@ request.put('https://jsonplaceholder.typicode.com/users/1', user)
 request.delete('https://jsonplaceholder.typicode.com/users/1')
   .then(res => console.log('Delete:', res))
   .catch(err => console.log(err));
+
+// Update user
+request.get('https://jsonplaceholder.typicode.com/users/1')
+  .then(res => {
+    console.log('Old user', res);
+    res.name = 'Temesghen Tekese';
+    res.username = 'temesghen';
+    return request.put('https://jsonplaceholder.typicode.com/users/1', res);
+  })
+  .then(data => console.log('Updated user', data))
+  .catch(err => console.log(err));
