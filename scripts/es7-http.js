@@ -21,28 +21,28 @@ class ES7HTTP {
 
   // HTTP POST Request
   async post(url, data) {
-    return fetch(url, {
+    const response = await fetch(url, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(data),
     })
-      .then(res => res.json())
-      .catch(err => err);
+    const responseData = await response.json();
+    return responseData;
   }
 
   // HTTP PUT Request
-  put(url, data) {
-    return fetch(url, {
+  async put(url, data) {
+    const response = await fetch(url, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(data),
-    })
-      .then(res => res.json())
-      .catch(err => err);
+    });
+    const responseData = await response.json();
+    return responseData;
   }
 
   // HTTP DELETE Request
