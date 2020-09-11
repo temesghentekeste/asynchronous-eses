@@ -16,7 +16,7 @@
 
 ## About <a name = "about"></a>
 
-Asynchronous ESES is a project intended for learning by exploring the different HTTP APIs in different versions of JavaScript -ES5, ES6 and ES7.
+Asynchronous ESES is a project that helps someone to learn Asynchronous JavaScript by exploring the different HTTP APIs of various JavaScript versions -ES5, ES6 and ES7.
 
 <h3>Description <a name = "description"></a></h3>
 <h4>This project allows to explore:</h4>
