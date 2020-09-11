@@ -27,3 +27,8 @@ request.post('https://jsonplaceholder.typicode.com/users', user)
 request.put('https://jsonplaceholder.typicode.com/users/1', user)
   .then(data => console.log('Put:', data))
   .catch(err => console.log(err));
+
+// Delete user
+request.delete('https://jsonplaceholder.typicode.com/users/1')
+  .then(res => console.log('Delete:', res))
+  .catch(err => console.log(err));

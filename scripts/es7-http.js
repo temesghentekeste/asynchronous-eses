@@ -46,14 +46,14 @@ class ES7HTTP {
   }
 
   // HTTP DELETE Request
-  delete(url) {
-    return fetch(url, {
+  async delete(url) {
+    const response = await fetch(url, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
       },
-    })
-      .then(() => 'Data has been deleted')
-      .catch(err => err);
+    });
+    const responseData = await 'Data has been deleted';
+    return responseData;
   }
 }
